@@ -21,9 +21,13 @@ export const TopLeft = styled.div`
   align-self: self-end;
 `;
 
-export const FirstName = styled.span`font-size: 30px;`;
+export const FirstName = styled.span`
+  font-size: 30px;
+`;
 
-export const LastName = styled.span`font-size: 20px;`;
+export const LastName = styled.span`
+  font-size: 20px;
+`;
 
 export const TopRight = styled.p`
   font-size: 1.2em;
@@ -33,7 +37,7 @@ export const TopRight = styled.p`
   grid-row-end: 2;
   align-self: self-end;
   margin: 0px;
-  ${'' /* justify-self: end; */}
+  ${'' /* justify-self: end; */};
 `;
 
 export const Hr = styled.hr`
@@ -70,9 +74,23 @@ export const MainMenu = styled.div`
   justify-self: center;
 `;
 
-export const Li = styled.li`opacity: 0.3;`;
+export const Li = styled.li`
+  top: 0px;
+  left: ${props => props.left || '0px'};
+  position: absolute;
+  opacity: 0.3;
+`;
+
+export const I = styled.i`
+  ${'' /* :hover {
+  animation: bounce 1s;
+} */};
+`;
 
 export const A = styled.a`
+  cursor: pointer;
+  opacity: 1;
+  position: absolute;
   text-decoration: none;
   font-size: 1.5rem;
   display: flex;
@@ -85,19 +103,23 @@ export const A = styled.a`
   flex-direction: column;
   background: ${props => props.color || 'grey'};
   :hover {
-    position: relative;
     width: 180px;
     height: 180px;
     top: -15px;
-    right: -15px;
+    right: -153px;
+  }
+  :hover ${I} {
+    animation: bounce 1s;
   }
 `;
 
 export const Ul = styled.ul`
-  display: flex;
   list-style: none;
+  position: relative;
 `;
 
 export const Span = styled.span``;
 
-export const Strong = styled.strong`font-size: 3em;`;
+export const Strong = styled.strong`
+  font-size: 3em;
+`;

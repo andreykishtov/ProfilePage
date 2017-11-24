@@ -14,7 +14,8 @@ import {
   Ul,
   A,
   Span,
-  Strong
+  Strong,
+  I
 } from '../StyledFiles/main.styled';
 
 const Main = () => {
@@ -30,9 +31,9 @@ const Main = () => {
     },
     topRight: { text: `UX designer, front-end developer and code lover` },
     mainMenu: [
-      { text: ['learn more', 'about me'], color: 'blue' },
-      { text: ['look at', 'my works'], color: 'red' },
-      { text: ['contact', 'me'], color: 'green' }
+      { text: ['learn more', 'about me'], color: 'blue', left: '-250px' },
+      { text: ['look at', 'my works'], color: 'red', left: '-112px' },
+      { text: ['contact', 'me'], color: 'green', left: '25px' }
     ]
   };
   return (
@@ -50,8 +51,11 @@ const Main = () => {
       <MainMenu>
         <Ul>
           {data.mainMenu.map(item => (
-            <Li key={item.text}>
-              <A color={item.color}>{item.text.map(arrItem => <div>{arrItem}</div>)}</A>
+            <Li key={item.text} left={item.left}>
+              <A color={item.color}>
+                {item.text.map(arrItem => <div>{arrItem}</div>)}
+                <I className="fa fa-chevron-down" aria-hidden="true" />
+              </A>
             </Li>
           ))}
         </Ul>
