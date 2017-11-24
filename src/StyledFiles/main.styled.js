@@ -9,6 +9,8 @@ export const Wrapper = styled.div`
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 1fr 3fr 5fr;
   justify-items: center;
+  background: url('../images/intro-bg0.jpg') no-repeat fixed center;
+  background-size: 100vw 100vh;
 `;
 
 export const TopLeft = styled.div`
@@ -82,12 +84,11 @@ export const Li = styled.li`
 `;
 
 export const I = styled.i`
-  ${'' /* :hover {
-  animation: bounce 1s;
-} */};
+  margin-top: 15px;
 `;
 
 export const A = styled.a`
+  transition: all 0.5s ease;
   cursor: pointer;
   opacity: 1;
   position: absolute;
@@ -105,11 +106,12 @@ export const A = styled.a`
   :hover {
     width: 180px;
     height: 180px;
-    top: -15px;
-    right: -153px;
+    margin-top: -15px;
+    margin-left: -15px;
   }
   :hover ${I} {
     animation: bounce 1s;
+    animation-timing-function: linear;
   }
 `;
 

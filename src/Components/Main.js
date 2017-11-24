@@ -1,5 +1,5 @@
 import React from 'react';
-
+import data from '../Data/main.json';
 import {
   Wrapper,
   Logo,
@@ -19,23 +19,6 @@ import {
 } from '../StyledFiles/main.styled';
 
 const Main = () => {
-  const data = {
-    name: {
-      first: `Andrey`,
-      last: `Kishtov`
-    },
-    mainText: {
-      header: `Hi,`,
-      message: `I’m an Israeli web developer. I create #usable, #responsive interface design, that is nice to look at
-      and easy to use.`
-    },
-    topRight: { text: `UX designer, front-end developer and code lover` },
-    mainMenu: [
-      { text: ['learn more', 'about me'], color: 'blue', left: '-250px' },
-      { text: ['look at', 'my works'], color: 'red', left: '-112px' },
-      { text: ['contact', 'me'], color: 'green', left: '25px' }
-    ]
-  };
   return (
     <Wrapper>
       <TopLeft>
