@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Main from './Main';
 import About from './About';
+import data from '../Data/main.json';
 
-const Wrapper = styled.div`
-  ${'' /* background: url('../images/intro-bg0.jpg') */};
-`;
+const Wrapper = styled.div``;
 
 class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Main />
-        <About />
+        <Main mainData={data.main} />
+        <About data={data} />
       </Wrapper>
     );
   }
