@@ -1,15 +1,14 @@
 import styled from 'styled-components';
+import introImg from '../images/intro-bg0.jpg';
 
 export const Wrapper = styled.div`
   color: white;
-  margin: 0 50px;
   display: grid;
-  height: 100vh;
   grid-gap: 10px;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 1fr 3fr 5fr;
   justify-items: center;
-  background: url('../images/intro-bg0.jpg') no-repeat fixed center;
+  background: url(${introImg}) no-repeat fixed center;
   background-size: 100vw 100vh;
 `;
 
@@ -39,7 +38,6 @@ export const TopRight = styled.p`
   grid-row-end: 2;
   align-self: self-end;
   margin: 0px;
-  ${'' /* justify-self: end; */};
 `;
 
 export const Hr = styled.hr`
