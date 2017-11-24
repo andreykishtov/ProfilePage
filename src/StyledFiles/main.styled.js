@@ -3,13 +3,18 @@ import introImg from '../images/intro-bg0.jpg';
 
 export const Wrapper = styled.div`
   color: white;
+  background: url(${introImg}) no-repeat fixed center;
+  background-size: 100vw 100vh;
+`;
+
+export const ContentWrapper = styled.div`
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 1fr 3fr 5fr;
   justify-items: center;
-  background: url(${introImg}) no-repeat fixed center;
-  background-size: 100vw 100vh;
+  width: 1200px;
+  margin: 0 auto;
 `;
 
 export const TopLeft = styled.div`
@@ -20,6 +25,7 @@ export const TopLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-self: self-end;
+  justify-self: start;
 `;
 
 export const FirstName = styled.span`
@@ -38,11 +44,12 @@ export const TopRight = styled.p`
   grid-row-end: 2;
   align-self: self-end;
   margin: 0px;
+  justify-self: self-end;
 `;
 
 export const Hr = styled.hr`
   margin: 0px;
-  width: 70%;
+  width: 100%;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;

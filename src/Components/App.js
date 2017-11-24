@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Main from './Main';
-import About from './About';
+import About from './About/About';
 import data from '../Data/main.json';
 
 const Wrapper = styled.div``;
