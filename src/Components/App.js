@@ -4,6 +4,7 @@ import Main from './Main';
 import About from './About/About';
 import data from '../Data/main.json';
 import MyWork from './MyWork';
+import Contact from './Contact';
 
 const Wrapper = styled.div``;
 
@@ -14,6 +15,7 @@ class App extends Component {
         <Main mainData={data.main} />
         <About data={data} />
         <MyWork />
+        <Contact />
       </Wrapper>
     );
   }
