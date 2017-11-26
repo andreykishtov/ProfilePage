@@ -24,25 +24,22 @@ const H2 = styled.h2`
   padding-top: 1.3em;
 `;
 
-const P = styled.div`
+const P = styled.p`
   color: white;
   padding-bottom: 10px;
+  font-size: 1.125em;
+  text-align: center;
 `;
 
-const Email = styled.a`
+const ContactMe = styled.a`
+  font-size: 1.125em;
   cursor: pointer;
   padding: 0.3em 1em;
   font-size: 1.3em;
-  background: #63a69f;
+  background: ${props => props.color || ''};
   text-decoration: none;
-`;
-
-const Skype = styled.a`
-  cursor: pointer;
-  padding: 0.3em 1em;
-  font-size: 1.3em;
-  background: blue;
-  text-decoration: none;
+  display: inline-block;
+  width: 250px;
 `;
 
 const Contact = () => {
@@ -52,8 +49,8 @@ const Contact = () => {
         <H2>Contact Me</H2>
         <P>I live In Israel And I am A junior Developer.</P>
         <P>
-          <Email>asdasd</Email>
-          <Skype>asdasdasd</Skype>
+          <ContactMe color="blue">asdasd</ContactMe>
+          <ContactMe color="red">asdasdasd</ContactMe>
         </P>
       </Wrapper>
     </Section>
